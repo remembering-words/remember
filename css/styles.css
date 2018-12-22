@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'Bonvalet';
+  /* имя шрифта для CSS правил */
+  src: local("Bonvalet"), /* проверяем наличие шрифта в ОС пользователя */ url('/font/Bonvalet-Regular.otf');
+  /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+@font-face {
+  font-family: 'BuSan';
+  /* имя шрифта для CSS правил */
+  src: local("Bureausign_Bold"), url('/font/Bureausign_Bold.otf') format('truetype'), url('/font/Bureausign_Bold.woff') format('woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'BuSan';
+  /* имя шрифта для CSS правил */
+  src: local("Bureausign_Regular"), url('/font/Bureausign_Regular.otf') format('truetype'), url('/font/Bureausign_Regular.woff') format('woff');
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: 'BuSan';
+}
+.content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 15px;
+  background: #ffffff;
+}
+.about {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 1.4em;
+}
+.about span {
+  font-size: 5em;
+}
+.about p {
+  font-size: 0.875em;
+}
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+.button a {
+  background: #ffe057;
+  padding: 20px 40px;
+  border-radius: 10px;
+  border-bottom: 5px solid #d7af00;
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+}
+.button a:hover {
+  background: #ffe571;
+}
+/* стили контейнера игры */
+.block_game {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 812px;
+}
+/* стили для блоков со словами */
+.block div {
+  border: 2px solid #eeeeee;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 10px 0px;
+  padding: 20px 30px;
+  cursor: pointer;
+}
+/* разметка блоков со словами и переводами */
+.block_eng_words,
+.block_rus_words {
+  text-align: center;
+}
+.block_eng_words {
+  margin-bottom: 25px;
+}
+.block_eng_word {
+  background: #eeeeee;
+}
+.block_rus_word:hover {
+  border-color: #ffe057;
+}
+/* стили для статистики */
+.block_guess_words {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.block_guess_words .guess {
+  padding: 3px 5px;
+  background: #96d841;
+  color: #ffffff;
+  border-radius: 5px;
+}
+/* стили для подсказок */
+.block_answer_right,
+.block_answer_wrong {
+  padding: 15px 20px;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.block_answer_wrong {
+  background: #EB939A;
+}
+.block_answer_right {
+  background: #acd373;
+}
+.hide {
+  display: none;
+}

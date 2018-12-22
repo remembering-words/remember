@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Bonvalet';
+  /* имя шрифта для CSS правил */
+  src: local("Bonvalet"), /* проверяем наличие шрифта в ОС пользователя */ url('/font/Bonvalet-Regular.otf');
+  /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+@font-face {
+  font-family: 'BuSan';
+  /* имя шрифта для CSS правил */
+  src: local("Bureausign_Bold"), url('/font/Bureausign_Bold.otf') format('truetype'), url('/font/Bureausign_Bold.woff') format('woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'BuSan';
+  /* имя шрифта для CSS правил */
+  src: local("Bureausign_Regular"), url('/font/Bureausign_Regular.otf') format('truetype'), url('/font/Bureausign_Regular.woff') format('woff');
+}
