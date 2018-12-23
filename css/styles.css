@@ -44,16 +44,20 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 15px;
+  padding: 30px 15px;
   background: #ffffff;
+}
+@media (max-width: 812px) {
+  .content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 .about {
   text-align: center;
-  margin-bottom: 60px;
   font-size: 1.4em;
-}
-.about span {
-  font-size: 5em;
+  margin-top: 10px;
 }
 .about p {
   font-size: 0.875em;
@@ -62,6 +66,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 60px;
   cursor: pointer;
 }
 .button a {
@@ -90,7 +95,6 @@ body {
   border: 2px solid #eeeeee;
   border-radius: 10px;
   font-size: 20px;
-  margin: 10px 0px;
   padding: 20px 30px;
   cursor: pointer;
 }
@@ -100,18 +104,32 @@ body {
   text-align: center;
 }
 .block_eng_words {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .block_eng_word {
   background: #eeeeee;
 }
+.block_rus_word:nth-of-type(2n) {
+  margin: 10px 0;
+}
 .block_rus_word:hover {
   border-color: #ffe057;
+}
+@media (max-width: 812px) {
+  .block_rus_word:hover {
+    border: 2px solid #eeeeee;
+  }
+  .block_rus_word:active {
+    border-color: #ffe057;
+  }
 }
 /* стили для статистики */
 .block_guess_words {
   text-align: center;
-  padding-bottom: 30px;
+  padding: 15px 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .block_guess_words .guess {
   padding: 3px 5px;
@@ -122,7 +140,7 @@ body {
 /* стили для подсказок */
 .block_answer_right,
 .block_answer_wrong {
-  padding: 15px 20px;
+  padding: 10px 20px;
   color: white;
   position: absolute;
   top: 0;
